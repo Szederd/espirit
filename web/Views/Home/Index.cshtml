@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Mighty List";
+}
+<input type="text" class="search" placeholder="Keresés"/>
+<div id="listContainer"></div>
+
+<h2>Szituáció</h2>
+<p>
+    Az eddig "megfelelően" működő csodalista oldal, a háttérrendszer (3rd party, nincs hozzáférésünk) hibája miatt elfogadhatatlanul lassú lett.
+    Az ügyfél szeretné ezt házon belül megoldani a régóta esedékes egyéb fejlesztési igényekkel együtt.
+</p>
+<h2>Peremfeltételek</h2>
+<ul>
+    <li>A háttérrendszer kódja nem módosítható</li>
+    <li>Külső kód/assembly nem használható</li>
+    <li>Elsődlegesen létező (solution alatti) komponensek használata</li>
+    <li>A szöveges mezők eleje fontos a felhasználóknak, a teljes szöveg tooltipként is elegendő</li>
+    <li>A háttérrendszer aktuális adataihoz képest legfeljebb 10 perces késés megengedett, kivéve tartós leállás esete</li>
+</ul>
+<h2>Feladatok</h2>
+<ul>
+    <li>Az eddig nem megjelenített "MissingGroupingData" mező megjelenítése "ikonként"(színes glyphicon, szintén rendezhető legyen)</li>
+    <li>Az aktuális rendezés láthatóvá tétele ::after pseudo tag és glyphicons használatával</li>
+    <li>A lekérés idejére tetszőleges loader gif megjelenítése áttetsző overlay használatával (doubleclick trap) - alapértelmezettként minden ajax start/stop eseményre</li>
+    <li>A pager gombok ne mozduljanak el az egér alól frissítés után (fix sormagasság és/vagy ellipsis használata)</li>
+    <li>Szabadszöveges keresőmező a szöveges oszlop szűréséhez - input esetén 2 másodperc tétlenség, vagy enter billentyűre frissítsen</li>
+    <li>A táblázat helyett flex elemek használata</li>
+    <li>Tapasztalt kódkonvenciók megtartása</li>
+    <li>A lista <strong>átlagos</strong> válaszidejének jelentős(nullaközeli) csökkentése</li>
+    <li>Egy "rejtett" bug kijavítása</li>
+</ul>
+<h2>Elméleti extra</h2>
+<ul>
+    <li>Hogyan kerülhető el iis pool recycle esetén, hogy az első felhasználó se találkozzon lassú betöltéssel?</li>
+    <li class="text-muted text-info">Én file-ba cachelném, ez álltal szerver leállás esetén is első betöltésnél gyors lenne, viszont ha lejár a cache időkerete, akkor a betöltés elkerülhetetlen. Ilyenkor a háttérben előbb frissíteném a listát, minthogy annak az ideje lejárna.</li>
+    <li>Miért nem működik a jelenlegi kód iis virtuális directory topológiában és hogyan működhetne mindkét esetben?</li>
+    <li>Miért nem működik és mit kellene módosítani ahhoz, hogy két grid példány is működhessen egy oldalon?</li>
+    <li>Hogyan lehetne generalizálni a rendezést "akárhány" mezőre (egyszerre csak egy, ahogy most)</li>
+    <li class="text-muted text-info">A model propeti-jein végigmennék ciklussal és ez alapján raknám ki a felületre. BackEnd részen, át kell írni, hogy dinamikusan fogadja a szűrt mezők neveit, és az alapján keresse vissza a hozzá tartozó propertit.</li>
+</ul>

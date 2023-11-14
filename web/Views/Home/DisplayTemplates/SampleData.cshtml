@@ -1,0 +1,30 @@
+﻿@model SlowDataSource.Domain.SampleData
+
+
+<tr data-itemid="@Model.Id">
+    <td><span class="glyphicon glyphicon-star" style="color: @GetColorForMGD(Model.MissingGroupingData)"></span></td>
+    <td>@string.Format("{0:#,##0}", Model.NumericData)</td>
+    <td class="truncate-text" title="@Model.TextData">@Model.TextData</td>
+</tr>
+
+@functions {
+    string GetColorForMGD(int mgdData)
+    {
+        if (mgdData == 0)
+        {
+            return "green";
+        }
+        else if (mgdData == 1)
+        {
+            return "blue";
+        }
+        else if (mgdData == 2)
+        {
+            return "red";
+        }
+        else
+        {
+            return "black";
+        }
+    }
+}

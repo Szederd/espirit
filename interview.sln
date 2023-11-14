@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapp", "web\webapp.csproj", "{B8CDC9FD-7001-452A-A68E-1E01EB07E940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlowDataSource", "SlowDataSource\SlowDataSource.csproj", "{FEC2F300-F396-4DD8-B3DB-B0CBDF5936BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8CDC9FD-7001-452A-A68E-1E01EB07E940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CDC9FD-7001-452A-A68E-1E01EB07E940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CDC9FD-7001-452A-A68E-1E01EB07E940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CDC9FD-7001-452A-A68E-1E01EB07E940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC2F300-F396-4DD8-B3DB-B0CBDF5936BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC2F300-F396-4DD8-B3DB-B0CBDF5936BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC2F300-F396-4DD8-B3DB-B0CBDF5936BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC2F300-F396-4DD8-B3DB-B0CBDF5936BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F229769C-1614-4F93-BF3D-096991356CB9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://office.espirit.hu:9080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SlowDataSource\\SlowDataSource.csproj
+		SccProjectName1 = SlowDataSource
+		SccLocalPath1 = SlowDataSource
+		SccProjectUniqueName2 = web\\webapp.csproj
+		SccProjectName2 = web
+		SccLocalPath2 = web
+	EndGlobalSection
+EndGlobal

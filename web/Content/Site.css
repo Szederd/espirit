@@ -1,0 +1,130 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#listContainer
+{
+    padding:10px;
+}
+    #listContainer table {
+        width: 100%;
+        table-layout: fixed;
+        background-color: ghostwhite;
+    }
+    #listContainer table tfoot,
+    #listContainer table caption {
+        background-color: lightsteelblue;
+        color: midnightblue;
+        padding:10px;
+        font-size:2rem;
+        text-align:center;
+        border: 1px solid silver;
+    }
+    #listContainer table thead th
+    {
+        background-color:dimgray;
+        color: white;
+        text-align:center;
+        border: 1px solid silver;
+    }
+        #listContainer table a:visited,
+        #listContainer table a:active,
+        #listContainer table a:hover,
+        #listContainer table a {
+            color:white;
+        }
+        #listContainer table tbody td 
+        {
+            padding:4px;
+            border: 1px solid silver;
+        }
+
+        a.pagenum
+        {
+            padding:8px;
+            border:1px solid gray;
+            margin:4px;
+            background-color: midnightblue;
+            display: inline-block;
+        }
+#listContainer table a.pagenum.current 
+{
+    background-color:white;
+}
+#listContainer table a.pagenum.current
+{
+    color:black;
+}
+
+.truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sortedAsc::after {
+    content: '\25B2'; 
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.sortedDesc::after {
+    content: '\25BC';
+}
+
+.loading{
+    height: 250px;
+    display:block;
+    position: relative;
+}
+
+#loading-bar-spinner.spinner {
+    left: 50%;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 19 !important;
+    animation: loading-bar-spinner 400ms linear infinite;
+}
+
+    #loading-bar-spinner.spinner .spinner-icon {
+        width: 40px;
+        height: 40px;
+        border: solid 4px transparent;
+        border-top-color: #00C8B1 !important;
+        border-left-color: #00C8B1 !important;
+        border-radius: 50%;
+    }
+
+@keyframes loading-bar-spinner {
+    0% {
+        transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
